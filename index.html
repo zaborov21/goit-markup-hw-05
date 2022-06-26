@@ -18,10 +18,10 @@
 
   <body>
     <!-- Хедер -->
-    <header class="page-header">
+    <header class="page-header border-header">
       <div class="header-container container">
-        <a class="header-logo" href="./index.html"
-          ><span class="accent-logo">Web</span>Studio</a
+        <a class="header-logo" href="./index.html">
+          <span class="accent-logo">Web</span>Studio</a
         >
         <nav class="header-nav">
           <ul class="header-list list">
@@ -62,7 +62,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!-- Секція наші переваги -->
@@ -127,31 +129,46 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="work-list list card-set">
             <li class="work-list-item card-set-item">
-              <img
-                class="img"
-                src="./images/work/img.jpg"
-                alt="Человек печатает на клавиатуре"
-                width="370"
-                height="294"
-              />
+              <div class="thumb-img">
+                <img
+                  class="img"
+                  src="./images/work/img.jpg"
+                  alt="Человек печатает на клавиатуре"
+                  width="370"
+                  height="294"
+                />
+                <div class="thumb">
+                  <h3 class="title">Десктопные приложения</h3>
+                </div>
+              </div>
             </li>
             <li class="work-list-item card-set-item">
-              <img
-                class="img"
-                src="./images/work/img-1.jpg"
-                alt="Человек, держащий телефон"
-                width="370"
-                height="294"
-              />
+              <div class="thumb-img">
+                <img
+                  class="img"
+                  src="./images/work/img-1.jpg"
+                  alt="Человек, держащий телефон"
+                  width="370"
+                  height="294"
+                />
+                <div class="thumb">
+                  <h3 class="title">Мобильные приложения</h3>
+                </div>
+              </div>
             </li>
             <li class="work-list-item card-set-item">
-              <img
-                class="img"
-                src="./images/work/img-2.jpg"
-                alt="Человек, держащий планшет"
-                width="370"
-                height="294"
-              />
+              <div class="thumb-img">
+                <img
+                  class="img"
+                  src="./images/work/img-2.jpg"
+                  alt="Человек, держащий планшет"
+                  width="370"
+                  height="294"
+                />
+                <div class="thumb">
+                  <h3 class="title">Дизайнерские решения</h3>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -671,5 +688,16 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn-close" type="button" data-modal-close>
+          <svg class="icon-cross-btn" width="11" height="11">
+            <use href="./images/icons/icons.svg#icon-cross">
+            </use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
