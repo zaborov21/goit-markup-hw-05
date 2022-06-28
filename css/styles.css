@@ -546,20 +546,18 @@ address {
   border: 1px solid var(--clients-color);
   border-radius: 4px;
 
-  transition: border-color var(--time) var(--time-function);
-}
-.clients-link:hover,
-.clients-link:focus {
-  border-color: var(--accent-color);
+  transition: border-color var(--time) var(--time-function),
+  color var(--time) var(--time-function);
 }
 .client-icon {
   fill: currentColor;
-
-  transition: fill var(--time) var(--time-function);
 }
 .clients-link:hover .client-icon,
-.clients-link:focus .client-icon {
-  fill: var(--accent-color);
+.clients-link:focus .client-icon,
+.clients-link:hover,
+.clients-link:focus  {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* portfolio.html */
@@ -627,7 +625,6 @@ address {
 .portfolio-card-link:hover .card-thumb-descr,
 .portfolio-card-link:focus .card-thumb-descr {
   transform: translateY(0);
-  opacity: 1;
 }
 
 .card-thumb {
@@ -646,7 +643,6 @@ address {
   height: 100%;
 
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
 
   transition: transform var(--time) var(--time-function);
 }
@@ -699,6 +695,7 @@ address {
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .backdrop.is-hidden .modal{
